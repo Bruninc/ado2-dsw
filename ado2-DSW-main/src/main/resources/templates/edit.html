@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Carro</title>
+</head>
+<body>
+<h1>Editar Carro</h1>
+<form th:action="@{/cars/update/{id}(id=${carDTO.id})}" th:object="${carDTO}" method="post">
+    <label>Nome</label>
+    <br>
+    <input type="text" name="name">
+    <br><br>
+    <label>Cor</label>
+    <br>
+    <input type="text" name="color">
+    <br><br>
+    <button type="submit">Salvar</button>
+</form>
+</body>
+</html>
